@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 — 2026-10-23
+
+- Use the approved FITsociety business email for package ownership verification.
+- Document the n8n Cloud submission requirements and validation evidence.
+- Keep the runtime node implementation unchanged from 0.1.0.
+
 ## 0.1.0 — 2026-10-23
 
 - Add company-bound OAuth2 client credentials.

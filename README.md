@@ -2,7 +2,7 @@
 
 Native FITsociety actions and signed webhook triggers for self-hosted n8n and subsequent n8n Cloud verification.
 
-**Release:** 0.1.0. The package supports self-hosted n8n. n8n Cloud availability requires separate n8n verification and is not yet approved. Each company needs its own approved FITsociety n8n credentials; Zapier and Make credentials cannot be reused.
+**Release:** 0.1.1. The package supports self-hosted n8n. n8n Cloud availability requires separate n8n verification and is not yet approved. Each company needs its own approved FITsociety n8n credentials; Zapier and Make credentials cannot be reused.
 
 ## Requirements and installation
 
@@ -20,7 +20,7 @@ For local self-hosted testing, install the resulting tarball into a dedicated cu
 ```sh
 mkdir -p /path/to/test-instance/custom
 cd /path/to/test-instance/custom
-npm install /absolute/path/to/n8n-nodes-fitsociety-0.1.0.tgz
+npm install /absolute/path/to/n8n-nodes-fitsociety-0.1.1.tgz
 ```
 
 Set `N8N_CUSTOM_EXTENSIONS` to `/path/to/test-instance/custom/node_modules/n8n-nodes-fitsociety/dist` and restart the test instance. Install the same package on every worker in a distributed installation. Self-hosted owners can install `n8n-nodes-fitsociety` through Settings → Community nodes. Cloud owners/admins can install only after n8n verifies this package and verified community nodes are enabled.

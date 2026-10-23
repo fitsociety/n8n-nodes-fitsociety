@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-fitsociety",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Company-scoped FITsociety actions and signed webhook triggers for n8n",
 	"license": "MIT",
 	"keywords": [
@@ -9,7 +9,7 @@
 	"author": {
 		"name": "mswessels",
 		"url": "https://github.com/mswessels",
-		"email": "74327878+mswessels@users.noreply.github.com"
+		"email": "info@fitsociety.nl"
 	},
 	"scripts": {
 		"build": "n8n-node build",
