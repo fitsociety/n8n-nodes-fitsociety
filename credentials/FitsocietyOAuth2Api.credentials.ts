@@ -45,7 +45,7 @@ export class FitsocietyOAuth2Api implements ICredentialType {
 	displayName = 'FITsociety OAuth2 API';
 	extends = ['oAuth2Api'];
 	icon: ICredentialType['icon'] = { light: 'file:fitsociety.svg', dark: 'file:fitsociety.svg' };
-	documentationUrl = 'https://docs.n8n.io/integrations/community-nodes/';
+	documentationUrl = 'https://github.com/fitsociety/n8n-nodes-fitsociety#credentials';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'API Base URL',

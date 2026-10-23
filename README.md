@@ -2,7 +2,7 @@
 
 Native FITsociety actions and signed webhook triggers for self-hosted n8n and subsequent n8n Cloud verification.
 
-**Status:** local unpublished development package. The backend n8n changes must be reviewed, merged and deployed, and the n8n provider configured, before real companies can connect. Cloud installation requires separate n8n approval. Zapier and Make credentials cannot be reused.
+**Release:** 0.1.0. The package supports self-hosted n8n. n8n Cloud availability requires separate n8n verification and is not yet approved. Each company needs its own approved FITsociety n8n credentials; Zapier and Make credentials cannot be reused.
 
 ## Requirements and installation
 
@@ -23,13 +23,13 @@ cd /path/to/test-instance/custom
 npm install /absolute/path/to/n8n-nodes-fitsociety-0.1.0.tgz
 ```
 
-Set `N8N_CUSTOM_EXTENSIONS` to `/path/to/test-instance/custom/node_modules/n8n-nodes-fitsociety/dist` and restart the test instance. Install the same package on every worker in a distributed installation. After npm publication, self-hosted owners can use Settings → Community nodes. Cloud owners/admins can install only after n8n verifies this package and verified community nodes are enabled.
+Set `N8N_CUSTOM_EXTENSIONS` to `/path/to/test-instance/custom/node_modules/n8n-nodes-fitsociety/dist` and restart the test instance. Install the same package on every worker in a distributed installation. Self-hosted owners can install `n8n-nodes-fitsociety` through Settings → Community nodes. Cloud owners/admins can install only after n8n verifies this package and verified community nodes are enabled.
 
 ## Credentials
 
 Create a **FITsociety OAuth2 API** credential with the supplied API base URL ending in `/public/v1`, company ID, client ID and client secret. The credential uses OAuth2 client credentials, so no instance callback registration is needed. It validates that issued tokens match the n8n provider and configured client/company. n8n stores credentials encrypted.
 
-Initial credentials are provisioned by a FITsociety operator after company administrator approval, using the backend's dry-run-first `provisionN8nClient.js` and explicit least-privilege scopes. This first package does not add a coach-facing n8n connection screen. Health/private communication consent is required for the full trigger catalog. Reactivate trigger workflows after rotating credentials.
+Initial credentials are provisioned by a FITsociety operator after company administrator approval, using the backend's dry-run-first `provisionN8nClient.js` and explicit least-privilege scopes. Credentials are currently supplied by FITsociety after company administrator approval. Health/private communication consent is required for the full trigger catalog. Reactivate trigger workflows after rotating credentials.
 
 ## Actions
 

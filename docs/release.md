@@ -1,22 +1,19 @@
-# Release preparation
+# Releases
 
-This package is local and unpublished. Publication is a separate authorized operation. User-owned backend merging and deployment precede real connection setup.
+The package source is public at https://github.com/fitsociety/n8n-nodes-fitsociety. Releases use the manually dispatched publish.yml GitHub Actions workflow, build/lint/tests and npm provenance. The workflow stages a reviewed version; npm requires the maintainer to complete 2FA approval before it becomes public. The initial authentication secret is temporary and removed after publication. Configure npm trusted publishing for subsequent releases once the package exists.
 
-## Self-hosted pilot and release
+## Releasing
 
-1. Review the private backend provisioning guide, configure a distinct restricted n8n provider, then provision only explicitly approved company grants. Use least-privilege scopes and attributed administrator/sensitive-data consent.
-2. Test the tarball in a disposable n8n 2.44.6+ instance. Real-company testing requires separate approval. Exercise token renewal, activation/deactivation/reactivation, secret rotation, event selection and duplicate-delivery handling.
-3. Choose the actual public repository and npm owner after authorization, and add the matching repository URL to package metadata. No placeholder repository is presented as a real service.
-4. Configure npm trusted publishing. Review and rename `.github/workflows/publish.yml.example` to enable manual provenance publishing. Configure authorized reviewers on the `npm-release` environment first.
-5. Run tests, build, lint, event drift, package scan and tarball inspection. Confirm npm name availability/ownership. Publish the reviewed version through GitHub Actions with provenance.
-6. Install on the pilot instance before broadening provider availability.
+1. Review the changes and version/changelog. Run npm test, npm run lint, the event drift check and tarball inspection.
+2. Dispatch the publication workflow from the reviewed repository revision. It installs the locked dependencies, tests, builds and stages the package with provenance.
+3. Review the staged version and provenance, then approve with npm's required 2FA. Never place credentials in source or logs.
+4. Confirm the public registry version and run the full official community-package scan.
+5. Record the result and remove the temporary bootstrap secret. Prefer npm OIDC trusted publishing for ongoing releases.
 
 ## Cloud verification
 
-Unverified packages cannot be installed on n8n Cloud. Submit after public source/package publication and provenance configuration. Follow the current [n8n verification guidelines](https://docs.n8n.io/connect/create-nodes/build-your-node/reference/verification-guidelines.md) and Creator Portal requirements: matching public repository/maintainer, MIT license, English copy/docs, one service, TypeScript, no external runtime dependencies and no runtime environment/filesystem access. Native node:crypto is used for signing.
+An npm release can be installed on supported self-hosted instances. n8n Cloud requires separate Creator Portal verification. Follow the current n8n verification guidelines: matching public repository/maintainer, MIT license, English copy/docs, one service, TypeScript, no external runtime dependencies and no runtime environment/filesystem access. Passing tests and scans does not guarantee Cloud approval.
 
-Passing build/lint/tests/scan does not guarantee approval. Cloud owners/admins can install only after approval and when verified community nodes are enabled. This delivery claims no Cloud approval or public listing.
+## Company access
 
-## Release safeguards
-
-The release guard intentionally refuses publication until a real public repository is configured. The publication workflow remains disabled with its `.example` suffix. Inspect `npm pack --dry-run --json` and verify no credentials, runtime data, private backend source or workflow secrets ship. Workflow static data contains only a subscription ID. Delivery is at least once and downstream idempotency remains necessary.
+The FITsociety provider must be enabled and the company must have approved n8n-specific credentials and explicit scopes. Credential provisioning requires an active company administrator and attributed sensitive-data consent for triggers. Publication does not grant access to company data or create credentials automatically.

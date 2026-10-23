@@ -7,7 +7,8 @@
 		"n8n-community-node-package"
 	],
 	"author": {
-		"name": "Matthijs",
+		"name": "mswessels",
+		"url": "https://github.com/mswessels",
 		"email": "74327878+mswessels@users.noreply.github.com"
 	},
 	"scripts": {
@@ -51,5 +52,16 @@
 	"engines": {
 		"node": ">=22.16"
 	},
-	"homepage": "https://fitsociety.io"
+	"homepage": "https://github.com/fitsociety/n8n-nodes-fitsociety#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fitsociety/n8n-nodes-fitsociety.git"
+	},
+	"bugs": {
+		"url": "https://github.com/fitsociety/n8n-nodes-fitsociety/issues"
+	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	}
 }
