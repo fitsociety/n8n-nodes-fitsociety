@@ -1,0 +1,50 @@
+{
+  "name": "FITsociety \u2014 synthetic client lookup",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-start",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "client",
+        "operation": "search",
+        "query": "synthetic-example",
+        "returnAll": false,
+        "limit": 5
+      },
+      "id": "client-search",
+      "name": "Find Client",
+      "type": "n8n-nodes-fitsociety.fitsociety",
+      "typeVersion": 1,
+      "position": [
+        260,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Find Client",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}

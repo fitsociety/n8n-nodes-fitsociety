@@ -1,0 +1,226 @@
+[
+  {
+    "event": "client.created",
+    "description": "Triggers when a client is created."
+  },
+  {
+    "event": "client.updated",
+    "description": "Triggers when a client is updated."
+  },
+  {
+    "event": "client.archived",
+    "description": "Triggers when a client is archived."
+  },
+  {
+    "event": "client.invited",
+    "description": "Triggers when an invitation to the app and client portal is sent."
+  },
+  {
+    "event": "client.portal_access.changed",
+    "description": "Triggers when a client's app and portal access settings changes."
+  },
+  {
+    "event": "client.relationship.rejected",
+    "description": "Triggers when a client relationship request is rejected."
+  },
+  {
+    "event": "client.note.created",
+    "description": "Triggers when a client note is created."
+  },
+  {
+    "event": "client.note.updated",
+    "description": "Triggers when a client note is updated."
+  },
+  {
+    "event": "client.note.deleted",
+    "description": "Triggers when a client note is deleted."
+  },
+  {
+    "event": "conversation.created",
+    "description": "Triggers when a direct or group conversation is created in supported FITsociety workflows."
+  },
+  {
+    "event": "conversation.updated",
+    "description": "Triggers when a conversation metadata record changes in supported FITsociety workflows."
+  },
+  {
+    "event": "conversation.participant.added",
+    "description": "Triggers when a participant is added or restored in a conversation in supported FITsociety workflows."
+  },
+  {
+    "event": "conversation.participant.removed",
+    "description": "Triggers when a participant is removed from a conversation in supported FITsociety workflows."
+  },
+  {
+    "event": "conversation.message.created",
+    "description": "Triggers when a conversation message is created in supported FITsociety workflows."
+  },
+  {
+    "event": "conversation.message.updated",
+    "description": "Triggers when a conversation message is updated in supported FITsociety workflows."
+  },
+  {
+    "event": "conversation.message.deleted",
+    "description": "Triggers when a conversation message is deleted in supported FITsociety workflows."
+  },
+  {
+    "event": "booking.created",
+    "description": "Triggers when a booking is created."
+  },
+  {
+    "event": "booking.updated",
+    "description": "Triggers when a booking is updated."
+  },
+  {
+    "event": "booking.cancelled",
+    "description": "Triggers when a booking is cancelled."
+  },
+  {
+    "event": "booking_request.created",
+    "description": "Triggers when a booking request is created."
+  },
+  {
+    "event": "booking_request.approved",
+    "description": "Triggers when a booking request is approved."
+  },
+  {
+    "event": "booking_request.rejected",
+    "description": "Triggers when a booking request is rejected."
+  },
+  {
+    "event": "recurring_booking.changed",
+    "description": "Triggers when a recurring booking changes."
+  },
+  {
+    "event": "calendar_task.created",
+    "description": "Triggers when a calendar task is created."
+  },
+  {
+    "event": "calendar_task.updated",
+    "description": "Triggers when a calendar task is updated."
+  },
+  {
+    "event": "calendar_task.cancelled",
+    "description": "Triggers when a calendar task is cancelled."
+  },
+  {
+    "event": "invoice.created",
+    "description": "Triggers when an invoice is created in supported FITsociety workflows."
+  },
+  {
+    "event": "invoice.sent",
+    "description": "Triggers when an invoice is sent in supported FITsociety workflows."
+  },
+  {
+    "event": "invoice.overdue",
+    "description": "Triggers when an invoice becomes overdue in supported FITsociety workflows."
+  },
+  {
+    "event": "invoice.paid",
+    "description": "Triggers when an invoice is paid in supported FITsociety workflows."
+  },
+  {
+    "event": "payment.succeeded",
+    "description": "Triggers when a payment succeeds in supported FITsociety workflows."
+  },
+  {
+    "event": "payment.failed",
+    "description": "Triggers when a payment fails in supported FITsociety workflows."
+  },
+  {
+    "event": "payment.request.created",
+    "description": "Triggers when a payment request is created in supported FITsociety workflows."
+  },
+  {
+    "event": "payment.request.cancelled",
+    "description": "Triggers when a payment request is cancelled in supported FITsociety workflows."
+  },
+  {
+    "event": "chargeback.created",
+    "description": "Triggers when a chargeback is created in supported FITsociety workflows."
+  },
+  {
+    "event": "subscription.changed",
+    "description": "Triggers when a subscription changes in supported FITsociety workflows."
+  },
+  {
+    "event": "subscription.cancelled",
+    "description": "Triggers when a subscription is cancelled in supported FITsociety workflows."
+  },
+  {
+    "event": "client_product.assigned",
+    "description": "Triggers when a client product is assigned in supported FITsociety workflows."
+  },
+  {
+    "event": "client_product.revoked",
+    "description": "Triggers when a client product is revoked in supported FITsociety workflows."
+  },
+  {
+    "event": "credit.assigned",
+    "description": "Triggers when credits are assigned to a client in supported FITsociety workflows."
+  },
+  {
+    "event": "credit.adjusted",
+    "description": "Triggers when a client credit balance is adjusted."
+  },
+  {
+    "event": "credit.revoked",
+    "description": "Triggers when credits are revoked from a client in supported FITsociety workflows."
+  },
+  {
+    "event": "membership.assigned",
+    "description": "Triggers when a membership is assigned to a client in supported FITsociety workflows."
+  },
+  {
+    "event": "form.assigned",
+    "description": "Triggers when a form is assigned to a client."
+  },
+  {
+    "event": "form.submitted",
+    "description": "Triggers when a form submission is received in supported FITsociety workflows."
+  },
+  {
+    "event": "intake.submitted",
+    "description": "Triggers when an intake submission is received in supported FITsociety workflows."
+  },
+  {
+    "event": "checkup.assigned",
+    "description": "Triggers when a check-up is assigned to a client."
+  },
+  {
+    "event": "checkup.submitted",
+    "description": "Triggers when a check-up submission is received in supported FITsociety workflows."
+  },
+  {
+    "event": "measurement.created",
+    "description": "Triggers when a measurement entry is created."
+  },
+  {
+    "event": "measurement.updated",
+    "description": "Triggers when a measurement entry is updated."
+  },
+  {
+    "event": "progress_photo.created",
+    "description": "Triggers when a progress photo is created in supported FITsociety workflows."
+  },
+  {
+    "event": "goal.updated",
+    "description": "Triggers when a client goal is updated."
+  },
+  {
+    "event": "habit_entry.created",
+    "description": "Triggers when a habit entry is created."
+  },
+  {
+    "event": "document.linked",
+    "description": "Triggers when a document is linked to a client."
+  },
+  {
+    "event": "document.updated",
+    "description": "Triggers when a document metadata record is updated."
+  },
+  {
+    "event": "document.archived",
+    "description": "Triggers when a document is archived."
+  }
+]

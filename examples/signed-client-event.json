@@ -1,0 +1,54 @@
+{
+  "name": "FITsociety \u2014 signed client event",
+  "nodes": [
+    {
+      "parameters": {
+        "events": [
+          "client.created",
+          "client.updated"
+        ]
+      },
+      "id": "client-event",
+      "name": "FITsociety Trigger",
+      "type": "n8n-nodes-fitsociety.fitsocietyTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "replace-with-your-saved-workflow-webhook-id"
+    },
+    {
+      "parameters": {
+        "resource": "client",
+        "operation": "get",
+        "clientId": "={{ $json.data.clientId }}"
+      },
+      "id": "client-detail",
+      "name": "Get Client",
+      "type": "n8n-nodes-fitsociety.fitsociety",
+      "typeVersion": 1,
+      "position": [
+        260,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "FITsociety Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get Client",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}

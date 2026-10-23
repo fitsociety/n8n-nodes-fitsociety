@@ -1,0 +1,55 @@
+{
+	"name": "n8n-nodes-fitsociety",
+	"version": "0.1.0",
+	"description": "Company-scoped FITsociety actions and signed webhook triggers for n8n",
+	"license": "MIT",
+	"keywords": [
+		"n8n-community-node-package"
+	],
+	"author": {
+		"name": "Matthijs",
+		"email": "74327878+mswessels@users.noreply.github.com"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"test": "npm run build && node --test tests/*.test.mjs",
+		"check:contracts": "node scripts/check-contracts.mjs",
+		"prepublishOnly": "node scripts/release-guard.mjs && npm test && npm run lint"
+	},
+	"files": [
+		"dist",
+		"!dist/**/*.tsbuildinfo",
+		"!dist/package.json",
+		"docs",
+		"examples"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/FitsocietyOAuth2Api.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Fitsociety/Fitsociety.node.js",
+			"dist/nodes/Fitsociety/FitsocietyTrigger.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.53.4",
+		"@types/node": "24.10.0",
+		"eslint": "9.39.1",
+		"prettier": "3.6.2",
+		"typescript": "5.9.3",
+		"n8n-workflow": "2.44.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	},
+	"engines": {
+		"node": ">=22.16"
+	},
+	"homepage": "https://fitsociety.io"
+}
