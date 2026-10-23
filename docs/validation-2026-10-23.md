@@ -1,11 +1,13 @@
 # Local validation — 2026-10-23
 
+This records the pre-publication validation. See [the release record](release-status-2026-10-23.md) for the subsequent production activation and successful public registry scan.
+
 ## Package
 
 - Node 24.22.1, n8n 2.44.6, n8n-workflow 2.44.2, official stable node CLI 0.53.4.
 - 51 tests passed; official CLI build and lint passed.
 - The 56-event snapshot matches the backend catalog.
-- Official community scanner local source and packed-code analyzers passed. The complete registry/provenance scan remains a publication-time check; this unpublished package has no npm attestation yet.
+- Official community scanner local source and packed-code analyzers passed before publication. The subsequent complete registry/provenance scan also passed; see the release record.
 - npm tarball installation into a disposable directory succeeded. The actual n8n PackageDirectoryLoader loaded both native nodes and the OAuth2 credential from the installed tarball, including npm's currently resolved wildcard peer n8n-workflow 2.16.0. Runtime support remains n8n 2.44.6+; older host versions are unsupported.
 - Tarball inspection found no environment files, runtime data, private backend source, obsolete credential files or absolute developer paths. Build cache and duplicate package metadata are excluded.
 - No external runtime dependencies. Production dependency audit reports zero vulnerabilities. The pinned stable development CLI has upstream development-only advisories (including Handlebars); npm offers a newer beta toolchain. This delivery retains the tested stable toolchain and does not claim the complete development dependency tree is vulnerability-free.
@@ -26,4 +28,4 @@ Native testing exposed and repaired credential self-context expression resolutio
 
 ## Release limits
 
-No production API calls, real company credentials, deployment, push, npm publishing, public repository creation or Cloud submission occurred. The same code targets both environments, but Cloud installation still requires external verification and backend deployment/provisioning. The documented host-version floor is not enforced by n8n package installation metadata.
+The local validation described above used synthetic data and did not create company credentials or submit the package for Cloud verification. Production activation and npm publication happened subsequently and are recorded separately. Cloud installation still requires external verification. The documented host-version floor is not enforced by n8n package installation metadata.
