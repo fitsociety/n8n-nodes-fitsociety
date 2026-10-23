@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2 — 2026-10-23
+
+- Add a native credential connection test using the company-bound OAuth2 profile endpoint.
+- Reject redirects during the credential test and retain provider, client and company validation.
+
 ## 0.1.1 — 2026-10-23
 
 - Use the approved FITsociety business email for package ownership verification.

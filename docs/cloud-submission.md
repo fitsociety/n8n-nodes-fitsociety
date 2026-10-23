@@ -4,6 +4,7 @@
 
 - Package: `n8n-nodes-fitsociety`
 - Version: `0.1.1`
+- Review-video target: `0.1.2`, adding the native credential test required for the demonstration. Publish and verify it before recording.
 - Display name: `FITsociety`
 - npm: https://www.npmjs.com/package/n8n-nodes-fitsociety
 - Source: https://github.com/fitsociety/n8n-nodes-fitsociety
@@ -27,7 +28,8 @@ Any reviewer test access must be provisioned separately for a synthetic demo com
 
 ## Verification evidence — 2026-10-23
 
-- Full official community-package scanner against published 0.1.0: passed, including provenance, attested source and package analysis. Repeat against 0.1.1 after publication.
+- Full official community-package scanner against published 0.1.1: passed, including provenance, attested source and package analysis. The attested commit is `e057f677ee022364852224a40f0d55e9926bee23`.
+- Version 0.1.1 was published through [GitHub Actions](https://github.com/fitsociety/n8n-nodes-fitsociety/actions/runs/40000143336) after build, all 51 tests, lint and release checks passed. The registry's `latest` tag and approved author email were verified. The temporary release authentication secret was removed.
 - Official node CLI lint: passed.
 - Backend event contract check: all 56 events matched.
 - Build and all 51 tests: passed immediately before the initial submission attempt.
@@ -37,6 +39,14 @@ Any reviewer test access must be provisioned separately for a synthetic demo com
 
 ## Submission state
 
-The Creator Portal is signed in. The initial submission attempt for 0.1.0 reached ownership verification, but its token was sent to the package's GitHub noreply author address. Version 0.1.1 replaces that address with the explicitly approved business email. Complete publication and retry ownership verification before claiming the review request has been submitted.
+The owner completed email verification and the package was submitted through the Creator Portal on 2026-10-23. The portal displayed “Thank you for your submission” and started its automated review. This is a submitted review request, not n8n Cloud approval.
 
-The submission form requests the npm package URL and declarations of authorship and official representation. The next step verifies ownership through a token sent to the package author email. No review request has been submitted and no n8n Cloud approval has been granted. Passing automated checks does not guarantee acceptance.
+The automated review subsequently completed successfully. The manual review is **AWAITING VIDEO**. The portal requires a continuous video of at most five minutes showing installation of the submitted npm version, a new workflow and node, new credentials and a successful connection test, common actions and one example of the app node used as an AI tool. Uploading that video is still required before claiming that the manual review is underway.
+
+A new local n8n 2.44.6 instance has run real read-only actions against an explicitly approved demo-company grant with only `platform:read` and `clients:read`. Its selected client is an existing fictitious integration-test record. The existing Codex agent has also listed and called the native FITsociety AI tool through n8n's MCP Server Trigger, returning that same fictitious client. These rehearsals are not the continuous review video. No OpenAI API key was created: local key storage was not approved, and the MCP demonstration uses the existing agent.
+
+The native credential-test addition was verified in real n8n: valid credentials passed, an invalid secret failed, a wrong company failed and no secret appeared in the returned error. The existing 51 package tests passed.
+
+The submission form requests the npm package URL and declarations of authorship and official representation. Ownership verification uses a token sent to the package author email. Passing automated checks does not guarantee acceptance; manual review and approval remain controlled by n8n.
+
+The initial 0.1.0 attempt reached ownership verification but used a GitHub noreply author address. Version 0.1.1 corrected it to the explicitly approved business email before the successful submission.

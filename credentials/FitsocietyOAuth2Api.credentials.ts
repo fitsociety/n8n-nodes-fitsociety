@@ -1,5 +1,6 @@
 import type {
 	ICredentialDataDecryptedObject,
+	ICredentialTestRequest,
 	ICredentialType,
 	IDataObject,
 	INodeProperties,
@@ -46,6 +47,14 @@ export class FitsocietyOAuth2Api implements ICredentialType {
 	extends = ['oAuth2Api'];
 	icon: ICredentialType['icon'] = { light: 'file:fitsociety.svg', dark: 'file:fitsociety.svg' };
 	documentationUrl = 'https://github.com/fitsociety/n8n-nodes-fitsociety#credentials';
+	test: ICredentialTestRequest = {
+		request: {
+			method: 'GET',
+			url: '={{$credentials.apiBaseUrl.replace(/\\/$/, "") + "/me"}}',
+			disableFollowRedirect: true,
+			timeout: 30000,
+		},
+	};
 	properties: INodeProperties[] = [
 		{
 			displayName: 'API Base URL',

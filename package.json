@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-fitsociety",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Company-scoped FITsociety actions and signed webhook triggers for n8n",
 	"license": "MIT",
 	"keywords": [
